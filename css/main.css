@@ -1,5 +1,12 @@
+:root {
+    --desat-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --gray-red: hsl(0, 6%, 24%);
+}
+
 body{
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
     margin: 0;
 }
 
@@ -11,16 +18,22 @@ body, html {
 h1  {
     text-transform: uppercase;
     text-align: center;
+    letter-spacing: 8px;
+    margin: 3.4px 0;
+    line-height: 122%;
 }    
 
 p {
     text-align: center;
+    color: var(--desat-red);
+    width: 85%;
+    margin: auto;
+    line-height: 142%;
 }
 
 .brand {
     margin: 35px 0 35px 35px;
-    width: 25%;
-    
+    width: 25%;   
 }
 
 .banner {
@@ -30,6 +43,27 @@ p {
 
 img {
    flex: 1;
+}
+
+#content {
+    margin: 4em 0;
+    font-size: calc(0.5em + 3vw)
+}
+
+#we {
+    color: var(--desat-red);
+    font-weight: 300;
+}
+
+#co {
+    color: var(--gray-red);
+    font-weight: 600;
+}
+
+#so {
+    color: var(--gray-red);
+    font-weight: 600;
+    margin-bottom: 18px;
 }
 
 .attribution { font-size: 11px; text-align: center; }
