@@ -86,25 +86,25 @@ form {
   
     /* I've used padding so you can see the edges of the elements. */
     
-  }
+}
   
-  input {
+input {
     /* Tell the input to use all the available space */
     flex-grow:2;
     /* And hide the input's outline, so the form looks like the outline */
     border:none;
-  }
+}
   
-  #email{
+#email {
     margin: 12% auto 12% 12%;
-  }
+}
 
-  input:focus {
+input:focus {
     /* removing the input focus blue box. Put this on the form if you like. */
     outline: none;
-  }
+}
   
-  button {
+button {
     /* Just a little styling to make it pretty */
     background-image: url(/images/icon-arrow.svg);
     background: linear-gradient(
@@ -112,8 +112,10 @@ form {
         hsl(0, 80%, 86%) 25%,
         hsl(0, 74%, 74%) 100%
         );
-        border-radius: 3em;
-  }
+    border: none;
+    width: 60px;
+    height: auto;     
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
