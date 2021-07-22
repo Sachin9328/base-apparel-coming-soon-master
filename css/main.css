@@ -66,5 +66,54 @@ img {
     margin-bottom: 18px;
 }
 
+.input {
+    width: 80%;
+    margin: auto;
+    border-radius: 60px;
+}
+
+button {
+    border-radius: 60px;
+}
+
+form {
+    /* This bit sets up the horizontal layout */
+    display:flex;
+    flex-direction:row;
+    
+    /* This bit draws the box around it */
+    border:1px solid grey;
+  
+    /* I've used padding so you can see the edges of the elements. */
+    
+  }
+  
+  input {
+    /* Tell the input to use all the available space */
+    flex-grow:2;
+    /* And hide the input's outline, so the form looks like the outline */
+    border:none;
+  }
+  
+  #email{
+    margin: 12% auto 12% 12%;
+  }
+
+  input:focus {
+    /* removing the input focus blue box. Put this on the form if you like. */
+    outline: none;
+  }
+  
+  button {
+    /* Just a little styling to make it pretty */
+    background-image: url(/images/icon-arrow.svg);
+    background: linear-gradient(
+        to right,
+        hsl(0, 80%, 86%) 25%,
+        hsl(0, 74%, 74%) 100%
+        );
+        border-radius: 3em;
+  }
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
