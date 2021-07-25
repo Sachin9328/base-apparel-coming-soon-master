@@ -1,9 +1,12 @@
 :root {
     --desat-red: hsl(0, 36%, 70%);
-    --soft-red: hsl(0, 93%, 68%);
-    --soft-red-rgb: 249, 98, 98;
+    --desat-red-rgb: 206, 151, 151;
     --gray-red: hsl(0, 6%, 24%);
-    --opa: 0.5;
+    --gray-red-rgb: 65, 58, 58;
+    --opa: 0.25;
+    --opa1: 0.80;
+    --soft-red: hsl(0, 93%, 68%);
+    --soft-red-rgb: 249, 98, 98;    
 }
 
 body{
@@ -16,21 +19,20 @@ body, html {
     height: 100%;
 }
 
-
 h1  {
-    text-transform: uppercase;
-    text-align: center;
     letter-spacing: 8px;
+    line-height: 122%; 
     margin: 3.4px 0;
-    line-height: 122%;
+    text-align: center;   
+    text-transform: uppercase;
 }    
 
 p {
-    text-align: center;
     color: var(--desat-red);
-    width: 85%;
-    margin: auto;
     line-height: 142%;
+    margin: auto;
+    text-align: center;
+    width: 83%;   
 }
 
 .brand {
@@ -48,8 +50,8 @@ img {
 }
 
 #content {
-    margin: 4em 0;
-    font-size: calc(0.5em + 3vw)
+    font-size: calc(0.5em + 3vw);
+    margin: 4em 0 2em 0;
 }
 
 #we {
@@ -69,31 +71,34 @@ img {
 }
 
 .input {
-    width: 80%;
-    margin: auto auto 20px auto;
     border-radius: 60px;
+    margin: auto auto 20px auto;
+    width: 80%;   
 }
 
 form {
+    /* This bit draws the box around it */
+    border:1px solid;
+    border-color: rgba(var(--gray-red-rgb),var(--opa));
+    border-right: none;
     /* This bit sets up the horizontal layout */
     display:flex;
-    flex-direction:row;
-    
-    /* This bit draws the box around it */
-    border:1px solid grey;
-    border-right: none;
+    flex-direction:row;    
 }
   
 input {
-    /* Tell the input to use all the available space */
-    flex-grow:2;
     /* And hide the input's outline, so the form looks like the outline */
     border:none;
+    /* Tell the input to use all the available space */
+    flex-grow:2;  
 }
   
 #email {
-    color: rgba(var(--soft-red-rgb),0.22);
     margin: 18px auto 18px 25px;
+}
+
+::placeholder {
+    color: rgba(var(--desat-red-rgb),var(--opa1));
 }
 
 input:focus {
@@ -109,11 +114,9 @@ button {
         hsl(0, 74%, 74%) 100%
         );
     border: none;
-    width: 70px;
-    height: 55px; 
     border-radius: 60px 60px 60px 60px; 
-    transform: translate(226px, -75px);
-   
+    height: 55px;   
+    width: 78px;    
 }
 
 button img {
