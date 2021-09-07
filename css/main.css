@@ -4,7 +4,8 @@
     --gray-red: hsl(0, 6%, 24%);
     --gray-red-rgb: 65, 58, 58;
     --opa: 0.25;
-    --opa1: 0.80;
+    --opa1: 0.75;
+    --opa2: 0.95;
     --soft-red: hsl(0, 93%, 68%);
     --soft-red-rgb: 249, 98, 98;    
 }
@@ -32,7 +33,7 @@ p {
     line-height: 142%;
     margin: auto;
     text-align: center;
-    width: 83%;   
+    width: 90%;   
 }
 
 .brand {
@@ -47,6 +48,10 @@ p {
 
 img {
    flex: 1;
+}
+
+.text-email {
+    margin-bottom: 70px;
 }
 
 #content {
@@ -95,6 +100,7 @@ input {
   
 #email {
     margin: 18px auto 18px 25px;
+    font-size: 15px;
 }
 
 ::placeholder {
@@ -121,6 +127,87 @@ button {
 
 button img {
     height: 24px;
+}
+
+@media (min-width: 768px) {
+
+    .brand {
+        grid-area: header;
+        padding-top: 30px;
+        margin: 35px 0 35px 0;
+    }
+
+    .banner {
+        grid-area: img;
+        height: 100vh;
+        max-width: 100%;
+        width: auto;
+    }
+
+    #content {
+        font-size: calc(0.5em + 1.6vw);
+        margin: 1.5em 0 2em 0;
+    }
+
+    h1  {
+        letter-spacing: 16px;
+        
+    }
+
+    #content p {
+        font-size: calc(0.5em + 0.5vw);
+        width: 77%;
+    }
+
+    .text-email {
+        grid-area: main;
+        height: 100vh;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 52% 48%;
+        grid-template-areas: 
+            "header img"
+            "main img"
+    }
+
+    .container {
+        padding: 0 0 0 150px;
+    }
+    
+    img {
+        height: auto;
+        max-width: 100%;
+        width: auto;
+    }
+
+    .text-left {
+        text-align: left;
+    }
+
+    .text-email {
+        width: 95%;
+    }
+
+    p {
+        color: var(--desat-red);
+        margin: 0;  
+    }
+
+    ::placeholder {
+        color: rgba(var(--desat-red-rgb),var(--opa2));
+    }
+
+    .input {
+        margin: auto auto 0 0; 
+        font-weight: 700;
+    }
+
+    button { 
+        height: auto;  
+        width: 108px;    
+    }
 }
 
 .attribution { font-size: 11px; text-align: center; }
