@@ -161,7 +161,6 @@ button img {
 
     .text-email {
         grid-area: main;
-        height: 100vh;
     }
 
     .container {
@@ -207,6 +206,10 @@ button img {
     button { 
         height: auto;  
         width: 108px;    
+    }
+
+    footer {
+        display: hidden;
     }
 }
 
