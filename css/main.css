@@ -149,14 +149,20 @@ button img {
         margin: 1.5em 0 2em 0;
     }
 
+    img {
+        /* height: auto; */
+        object-fit: cover;
+        object-position: left;
+    }
+
     h1  {
         letter-spacing: 16px;
         
     }
 
     #content p {
-        font-size: calc(0.5em + 0.5vw);
-        width: 77%;
+        font-size: calc(0.4em + 0.5vw);
+        width: 75%;
     }
 
     .text-email {
@@ -175,12 +181,6 @@ button img {
         padding: 0 0 0 150px;
     }
     
-    img {
-        height: auto;
-        max-width: 100%;
-        width: auto;
-    }
-
     .text-left {
         text-align: left;
     }
@@ -201,6 +201,7 @@ button img {
     .input {
         margin: auto auto 0 0; 
         font-weight: 700;
+        width: 70%;
     }
 
     button { 
@@ -209,9 +210,10 @@ button img {
     }
 
     footer {
-        display: hidden;
+        display: none;
     }
 }
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+

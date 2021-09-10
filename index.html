@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    
+    <script src="js/main.js"></script>
     <title>Frontend Mentor | Base Apparel coming soon page</title>
 
 </head>
@@ -21,7 +21,9 @@
         </div>  
 
         <div class="banner">
-            <img src="images/hero-mobile.jpg" alt="">        
+            <img src="images/hero-mobile.jpg"
+                srcset="images/hero-mobile.jpg 767w, images/hero-desktop.jpg 768w"
+            alt="">        
         </div>
 
         <div class="text-email">
@@ -36,10 +38,12 @@
                     Add your email below to stay up-to-date with announcements and our launch deals.</p>
             </div>    
             
-            <form class="input" action="#">
-                <input type="text" name="email" id="email" placeholder="Email Address"/>
-                <button onclick="EmailValidation(document.input.email)"><img src="images/icon-arrow.svg" alt="" srcset=""></button>
+            <form class="input">
+                <input class="email" type="text" name="email" id="email" placeholder="Email Address"/>
+                <button type="submit"><img src="images/icon-arrow.svg" alt="" srcset=""></button>
             </form>
+
+            <div id="error"></div>
 
         </div>  
           
@@ -52,6 +56,6 @@
         </p>
     </footer>
 
-    <script src="js/main.js"></script>
+    
 </body>
 </html>
