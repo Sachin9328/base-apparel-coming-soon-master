@@ -1,11 +1,20 @@
-$(".input").on('submit', function(e){
-    e.preventDefault();
-        if ( !validEmail( $(".email").val() ) ) {
-            $("#error").html("Please enter a valid email address.");
-    } 
-})
-
-function validEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-};  
+function ValidateEmail(inputText)
+{
+    var x = document.forms["input"]["email"].value;
+    if (x == "") {
+        alert("Please enter an email address!");
+        return false;
+    } else {
+        var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if(inputText.value.match(mailformat))
+        {
+            alert("Thank you! We will contact you with further announcements!");
+            return true;
+        }
+        else
+        {
+            alert("Please enter a valid email address!");
+            return false;
+        }
+    }
+}

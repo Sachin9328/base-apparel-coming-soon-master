@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/main.js"></script>
     <title>Frontend Mentor | Base Apparel coming soon page</title>
 
@@ -38,12 +39,12 @@
                     Add your email below to stay up-to-date with announcements and our launch deals.</p>
             </div>    
             
-            <form class="input">
+            <form class="input" name="input">
                 <input class="email" type="text" name="email" id="email" placeholder="Email Address"/>
-                <button type="submit"><img src="images/icon-arrow.svg" alt="" srcset=""></button>
+                <button type="submit" onclick="ValidateEmail(document.input.email)"><img src="images/icon-arrow.svg" alt="" srcset=""></button>
             </form>
 
-            <div id="error"></div>
+            
 
         </div>  
           
